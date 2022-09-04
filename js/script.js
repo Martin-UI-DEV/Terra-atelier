@@ -1,48 +1,139 @@
-const welcome = alert(`Bienvenido a la tienda de "Terra Atelier"
----------------------------------------------
-Presione aceptar para continuar`);
-
-const menu = parseInt(
-  prompt(`Elija una opción ingresando el número que corresponda
-            
-            1 - Productos
-            2 - Mi carrito
-            3 - Info
-            4 - Salir`)
-);
-
-if (menu !== 1 || 2 || 3 || 4) {
-  alert("Por favor ingrese una opción válida");
-} else if (menu == 1) {
-  const products = parseInt(
-    prompt(`Elija uno o varios productos de la siguiente lista. Terminada la compra dirijase al carrito ingresando la opción "4"
-              
-              1 - Potus
-              2 - Suculentas
-              3 - Cactus
-              4 - Mi carrito de compras`)
-  );
-} else if (menu == 2) {
-  const myCart = alert(
-    `Estos son los productos que seleccionaste, presione aceptar para seleccionar el método de pago:`
-  );
-} else if (menu == 3) {
-  const info = alert(
-    `¿Sabias que abonando en efectivo tenés un 10% de descuento sobre el valor total de tu compra?
-                ---------------------------------------------
-                Presioná aceptar para volver al menú anterior
-                    `
-  );
-} else {
-  alert(`¡Gracias por tu visita!`);
+/* CALCULO DE TOTALES */
+let total = 0;
+function finalPrice(price, units) {
+  total = price * units;
+  return total;
 }
 
-const paymentMethod = parseInt(
-  prompt(`Seleccione un método de pago:
-1 - Efectivo
-2 - Tarjeta de débito`)
-);
+/* DECLARACION DE FUNCION DEL MENU PRINCIPAL */
+function mainMenu() {
+  let units = 0;
+  let price = 0;
+  let success = "";
+  let creditCard = 0;
+  /* LISTA DE PRODUCTOS */
+  let products = Number(
+    prompt(`Elegí el producto que quieras comprar ingresando el número que corresponda
 
-const TotalCash = alert(`El total a pagar en efectivo es:`);
+    --------------------------
+    
+    1 - Potus - $750
+    2 - Suculentas - $600
+    3 - Cactus - $500`)
+  );
 
-const TotalCard = alert(`El total a pagar con tarjeta es:`);
+  /* SWITCH DE OPCIONES */
+  
+  switch (products) {
+
+    /* SI ELEGIS POTUS */
+    case 1:
+      alert("Recordá que si tu compra supera los $2000 tenés un 10% de descuento");
+      /* PROMPT DE CANTIDADES*/
+      units = Number(prompt("Cuantas desea llevar?"));
+      price = 750;
+      total = finalPrice(price, units);
+
+      /* CONDICIONAL PARA EL DESCUENTO */
+      discount = total - (total * 0.10);
+      if (total >= 2000) {
+        alert(`El total a pagar es de $${total} pero con el descuento por cantidad vas a pagar $${discount}`);
+      }
+      else {
+        alert(`El total a pagar es: $${total}`);
+      }
+      /* MEDIO DE PAGO*/      
+      success = Number(prompt(`¿Cómo desea abonar? 
+      1 = Efectivo
+      2 = Tarjeta de crédito`));
+      if (success == 1  ) {
+        alert("¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar");
+        alert("¡Gracias por tu compra!");
+      }
+      else if (success == 2 )  {
+        creditCard = Number(prompt(`Ingrese los datos de su tarjeta de crédito`));
+        alert("¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar");
+        alert("¡Gracias por tu compra!");
+      }
+      else {
+        alert("Por favor ingresá una opción válida");
+      }
+      break;
+      
+      
+    /* SI ELEGIS SUCULENTAS */
+    case 2:
+      alert("Recordá que si tu compra supera los $2000 tenés un 10% de descuento");
+      /* PROMPT DE CANTIDADES*/
+      units = Number(prompt("Cuantas desea llevar?"));
+      price = 600;
+      total = finalPrice(price, units);
+
+      /* CONDICIONAL PARA EL DESCUENTO */
+      discount = total - (total * 0.10);
+      if (total >= 2000) {
+        alert(`El total a pagar es de $${total} pero con el descuento por cantidad vas a pagar $${discount}`);
+      }
+      else {
+        alert(`El total a pagar es: $${total}`);
+      }     
+      /* MEDIO DE PAGO*/  
+      success = Number(prompt(`¿Cómo desea abonar? 
+      1 = Efectivo
+      2 = Tarjeta de crédito`));
+      if (success == 1  ) {
+        alert("¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar");
+        alert("¡Gracias por tu compra!");
+      }
+      else if (success == 2 )  {
+        creditCard = Number(prompt(`Ingrese los datos de su tarjeta de crédito`));
+        alert("¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar");
+        alert("¡Gracias por tu compra!");
+      }
+      else {
+        alert("Por favor ingresá una opción válida");
+      }
+      break;
+      
+   
+    /* SI ELEGIS CACTUS */
+    case 3:
+      alert("Recordá que si tu compra supera los $2000 tenés un 10% de descuento");
+      /* PROMPT DE CANTIDADES*/
+      units = Number(prompt("Cuantas desea llevar?"));
+      price = 500;
+      total = finalPrice(price, units);
+
+      /* CONDICIONAL PARA EL DESCUENTO */
+      discount = total - (total * 0.10);
+      if (total >= 2000) {
+        alert(`El total a pagar es de $${total} pero con el descuento por cantidad vas a pagar $${discount}`);
+      }
+      else {
+        alert(`El total a pagar es: $${total}`);
+      }      
+      /* MEDIO DE PAGO*/ 
+      success = Number(prompt(`¿Cómo desea abonar? 
+      1 = Efectivo
+      2 = Tarjeta de crédito`));
+      if (success == 1  ) {
+        alert("¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar");
+        alert("¡Gracias por tu compra!");
+      }
+      else if (success == 2 )  {
+        creditCard = Number(prompt(`Ingrese los datos de su tarjeta de crédito`));
+        alert("¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar");
+        alert("¡Gracias por tu compra!");
+      }
+      else {
+        alert("Por favor ingresá una opción válida");
+      }
+      break;
+      
+
+
+  }
+}
+
+  /* FUNCION INVOCADA*/
+mainMenu();
