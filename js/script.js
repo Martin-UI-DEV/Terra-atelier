@@ -23,117 +23,138 @@ function mainMenu() {
   );
 
   /* SWITCH DE OPCIONES */
-  
-  switch (products) {
 
+  switch (products) {
     /* SI ELEGIS POTUS */
     case 1:
-      alert("Recordá que si tu compra supera los $2000 tenés un 10% de descuento");
+      alert(
+        "Recordá que si tu compra supera los $2000 tenés un 10% de descuento"
+      );
       /* PROMPT DE CANTIDADES*/
       units = Number(prompt("Cuantas desea llevar?"));
       price = 750;
       total = finalPrice(price, units);
 
       /* CONDICIONAL PARA EL DESCUENTO */
-      discount = total - (total * 0.10);
+      discount = total - total * 0.1;
       if (total >= 2000) {
-        alert(`El total a pagar es de $${total} pero con el descuento por cantidad vas a pagar $${discount}`);
-      }
-      else {
+        alert(
+          `El total a pagar es de $${total} pero con el descuento por cantidad vas a pagar $${discount}`
+        );
+      } else {
         alert(`El total a pagar es: $${total}`);
       }
-      /* MEDIO DE PAGO*/      
-      success = Number(prompt(`¿Cómo desea abonar? 
+      /* MEDIO DE PAGO*/
+      success = Number(
+        prompt(`¿Cómo desea abonar? 
       1 = Efectivo
-      2 = Tarjeta de crédito`));
-      if (success == 1  ) {
-        alert("¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar");
+      2 = Tarjeta de crédito`)
+      );
+      if (success == 1) {
+        alert(
+          "¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar"
+        );
         alert("¡Gracias por tu compra!");
-      }
-      else if (success == 2 )  {
-        creditCard = Number(prompt(`Ingrese los datos de su tarjeta de crédito`));
-        alert("¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar");
+      } else if (success == 2) {
+        creditCard = Number(
+          prompt(`Ingrese los datos de su tarjeta de crédito`)
+        );
+        alert(
+          "¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar"
+        );
         alert("¡Gracias por tu compra!");
-      }
-      else {
+      } else {
         alert("Por favor ingresá una opción válida");
       }
       break;
-      
-      
+
     /* SI ELEGIS SUCULENTAS */
     case 2:
-      alert("Recordá que si tu compra supera los $2000 tenés un 10% de descuento");
+      alert(
+        "Recordá que si tu compra supera los $2000 tenés un 10% de descuento"
+      );
       /* PROMPT DE CANTIDADES*/
       units = Number(prompt("Cuantas desea llevar?"));
       price = 600;
       total = finalPrice(price, units);
 
       /* CONDICIONAL PARA EL DESCUENTO */
-      discount = total - (total * 0.10);
+      discount = total - total * 0.1;
       if (total >= 2000) {
-        alert(`El total a pagar es de $${total} pero con el descuento por cantidad vas a pagar $${discount}`);
-      }
-      else {
+        alert(
+          `El total a pagar es de $${total} pero con el descuento por cantidad vas a pagar $${discount}`
+        );
+      } else {
         alert(`El total a pagar es: $${total}`);
-      }     
-      /* MEDIO DE PAGO*/  
-      success = Number(prompt(`¿Cómo desea abonar? 
+      }
+      /* MEDIO DE PAGO*/
+      success = Number(
+        prompt(`¿Cómo desea abonar? 
       1 = Efectivo
-      2 = Tarjeta de crédito`));
-      if (success == 1  ) {
-        alert("¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar");
+      2 = Tarjeta de crédito`)
+      );
+      if (success == 1) {
+        alert(
+          "¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar"
+        );
         alert("¡Gracias por tu compra!");
-      }
-      else if (success == 2 )  {
-        creditCard = Number(prompt(`Ingrese los datos de su tarjeta de crédito`));
-        alert("¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar");
+      } else if (success == 2) {
+        creditCard = Number(
+          prompt(`Ingrese los datos de su tarjeta de crédito`)
+        );
+        alert(
+          "¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar"
+        );
         alert("¡Gracias por tu compra!");
-      }
-      else {
+      } else {
         alert("Por favor ingresá una opción válida");
       }
       break;
-      
-   
+
     /* SI ELEGIS CACTUS */
     case 3:
-      alert("Recordá que si tu compra supera los $2000 tenés un 10% de descuento");
+      alert(
+        "Recordá que si tu compra supera los $2000 tenés un 10% de descuento"
+      );
       /* PROMPT DE CANTIDADES*/
       units = Number(prompt("Cuantas desea llevar?"));
       price = 500;
       total = finalPrice(price, units);
 
       /* CONDICIONAL PARA EL DESCUENTO */
-      discount = total - (total * 0.10);
+      discount = total - total * 0.1;
       if (total >= 2000) {
-        alert(`El total a pagar es de $${total} pero con el descuento por cantidad vas a pagar $${discount}`);
-      }
-      else {
+        alert(
+          `El total a pagar es de $${total} pero con el descuento por cantidad vas a pagar $${discount}`
+        );
+      } else {
         alert(`El total a pagar es: $${total}`);
-      }      
-      /* MEDIO DE PAGO*/ 
-      success = Number(prompt(`¿Cómo desea abonar? 
+      }
+      /* MEDIO DE PAGO*/
+      success = Number(
+        prompt(`¿Cómo desea abonar? 
       1 = Efectivo
-      2 = Tarjeta de crédito`));
-      if (success == 1  ) {
-        alert("¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar");
+      2 = Tarjeta de crédito`)
+      );
+      if (success == 1) {
+        alert(
+          "¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar"
+        );
         alert("¡Gracias por tu compra!");
-      }
-      else if (success == 2 )  {
-        creditCard = Number(prompt(`Ingrese los datos de su tarjeta de crédito`));
-        alert("¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar");
+      } else if (success == 2) {
+        creditCard = Number(
+          prompt(`Ingrese los datos de su tarjeta de crédito`)
+        );
+        alert(
+          "¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar"
+        );
         alert("¡Gracias por tu compra!");
-      }
-      else {
+      } else {
         alert("Por favor ingresá una opción válida");
       }
       break;
-      
-
-
   }
 }
 
-  /* FUNCION INVOCADA*/
+/* FUNCION INVOCADA*/
 mainMenu();
