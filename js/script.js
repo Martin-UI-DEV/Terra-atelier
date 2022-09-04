@@ -31,7 +31,7 @@ function mainMenu() {
         "Recordá que si tu compra supera los $2000 tenés un 10% de descuento"
       );
       /* PROMPT DE CANTIDADES*/
-      units = Number(prompt("Cuantas desea llevar?"));
+      units = Number(prompt("¿Cuantos desea llevar?"));
       price = 750;
       total = finalPrice(price, units);
 
@@ -117,7 +117,7 @@ function mainMenu() {
         "Recordá que si tu compra supera los $2000 tenés un 10% de descuento"
       );
       /* PROMPT DE CANTIDADES*/
-      units = Number(prompt("Cuantas desea llevar?"));
+      units = Number(prompt("¿Cuantos desea llevar?"));
       price = 500;
       total = finalPrice(price, units);
 
