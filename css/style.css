@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .footer-primario #131515 {
@@ -25,7 +25,9 @@
   background-color: #fafafa;
 }
 
-.footer, .footer--redisenio1, .footer--redisenio2 {
+.footer,
+.footer--redisenio1,
+.footer--redisenio2 {
   width: 100%;
   height: auto;
   background-color: #131515;
@@ -56,18 +58,19 @@ section {
 /* navbar */
 .navbar {
   width: 100%;
+  display: inline-block;
   background-color: #2ac9ad;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  position: fixed;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-collapse {
@@ -75,15 +78,14 @@ section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-preferred-size: auto;
-      flex-basis: auto;
+  flex-basis: auto;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   margin-right: 10rem;
 }
 
 .logo {
-  margin-left: 10rem;
   width: 10rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -119,8 +121,8 @@ section {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .li-navbar {
@@ -129,13 +131,13 @@ section {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   margin-right: 10rem;
   text-decoration: none;
   font-weight: bolder;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
- Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 a:link,
@@ -173,21 +175,21 @@ a.nav-link {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   padding-top: 10rem;
 }
 
 h1 {
   color: #fafafa;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
- Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 6rem;
   margin-left: 10rem;
   margin-right: 10rem;
@@ -201,7 +203,7 @@ h1 {
   border-color: #2ac9ad;
   color: #fafafa;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
- Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5rem;
   margin-left: 10rem;
   margin-right: 10rem;
@@ -209,12 +211,12 @@ h1 {
 }
 
 .btn-hero:hover {
-  background-color: #28B59C;
+  background-color: #28b59c;
 }
 
 .btn-hero:active {
   -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
 @media only screen and (max-width: 991px) {
@@ -233,14 +235,14 @@ h1 {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     text-align: center;
   }
 }
@@ -303,8 +305,8 @@ h1 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background-color: #fafafa;
 }
 
@@ -369,7 +371,7 @@ h1 {
   padding-left: 3rem;
   padding-right: 3rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
- Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #131515;
   font-size: 1.5rem;
 }
@@ -378,7 +380,7 @@ h1 {
   padding-left: 3rem;
   padding-right: 3rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
- Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #131515;
   font-size: 1.5rem;
   text-align: right;
@@ -390,11 +392,11 @@ h1 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   padding-top: 8rem;
   padding-right: 3rem;
   padding-bottom: 4rem;
@@ -421,8 +423,8 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 50%;
   padding: 4rem;
 }
@@ -452,11 +454,11 @@ footer {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: #131515;
   padding-left: 0rem;
   margin-bottom: 0rem;
@@ -468,11 +470,11 @@ footer {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-right: 2rem;
   margin-left: 2rem;
   margin-top: 0.5rem;
@@ -481,7 +483,7 @@ footer {
   text-decoration: none;
   font-weight: bolder;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
- Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 li a:hover {
@@ -504,8 +506,8 @@ footer hr {
   .ul-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     padding-left: 0%;
   }
 }
@@ -525,14 +527,14 @@ footer hr {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -564,11 +566,11 @@ iframe {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: #2ac9ad;
   color: #fafafa;
   width: 50%;
@@ -581,7 +583,7 @@ form {
   margin: 1.5rem;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
   border: 3px solid #555;
 }
 
@@ -590,7 +592,7 @@ textarea {
   height: 100px;
   padding: 12px 20px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
@@ -605,7 +607,7 @@ input {
   height: 40px;
   padding: 12px 20px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
@@ -617,14 +619,15 @@ input {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #131515;
   width: auto;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-size: xx-large;
   background-color: #131515;
@@ -699,11 +702,11 @@ input {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   width: 100%;
   height: auto;
 }
@@ -713,7 +716,8 @@ input {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   color: #131515;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .responsive-map {
@@ -741,14 +745,14 @@ input {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   background-color: #2ac9ad;
   color: #fafafa;
   width: 100%;
@@ -777,8 +781,8 @@ div .col-6 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .btn-inbox {
@@ -787,8 +791,8 @@ div .col-6 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding-top: 0.8rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -807,10 +811,11 @@ div .col-6 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   padding-bottom: 2rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   text-align: right;
 }
@@ -825,7 +830,8 @@ div .col-6 {
 .text-map-bold {
   padding-top: 6rem;
   padding-bottom: 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   text-align: right;
   font-weight: bold;
@@ -840,11 +846,11 @@ div .col-6 {
 @media only screen and (max-width: 420px) {
   .box-map-left {
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     padding: 1rem;
   }
 }
@@ -852,8 +858,8 @@ div .col-6 {
 @media only screen and (max-width: 420px) {
   .text-map {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -873,8 +879,8 @@ div .col-6 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .box-flex-pie {
@@ -895,11 +901,11 @@ div .col-6 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 50%;
   background-color: #2ac9ad;
 }
@@ -919,7 +925,7 @@ div .col-6 {
 .box-text-3 {
   padding: 2rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
- Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #131515;
   font-size: 2.3rem;
   text-align: center;
@@ -932,6 +938,18 @@ div .col-6 {
 .iconcart {
   fill: #fafafa;
   display: inline-block;
+}
+
+.cart__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.cart__buttons .button-inbox-market {
+  margin: 0;
 }
 
 @media only screen and (max-width: 1293px) {
@@ -1034,35 +1052,40 @@ h3 {
 }
 
 .catalogo {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin-bottom: 1rem;
   margin-top: 2rem;
 }
 
 .title-terra {
   color: #131515;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin-bottom: 2rem;
 }
 
 .question-terra {
   color: #131515;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: larger;
   margin-bottom: 1rem;
 }
 
 .categoria-catalogo {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 100;
   padding-top: 1rem;
   padding-right: 4rem;
   color: #131515;
+  cursor: pointer;
 }
 
 h3.categoria-catalogo:hover {
   color: #2ac9ad;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .linea-precio {
@@ -1075,8 +1098,8 @@ h3.categoria-catalogo:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   margin-bottom: 5rem;
 }
 
@@ -1086,16 +1109,14 @@ h3.categoria-catalogo:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  margin: 1rem;
+  -ms-flex-pack: end;
+  justify-content: end;
   margin-bottom: none;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .navbar2 {
@@ -1106,18 +1127,19 @@ h3.categoria-catalogo:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 5rem;
 }
 
 .categoria-catalogo2 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 100;
   padding-top: 1rem;
   margin-right: 8rem;
@@ -1130,8 +1152,8 @@ h3.categoria-catalogo:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   margin-right: 10rem;
   margin-left: 10rem;
 }
@@ -1147,14 +1169,15 @@ h3.categoria-catalogo:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-right: 0rem;
   width: 50vw;
 }
 
 .text-quienes {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 80;
   font-size: larger;
   margin-right: 4rem;
@@ -1183,11 +1206,11 @@ h3.categoria-catalogo:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1199,8 +1222,8 @@ h3.categoria-catalogo:hover {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -1215,8 +1238,8 @@ h3.categoria-catalogo:hover {
     margin-top: 2rem;
     margin-bottom: 2rem;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -1229,7 +1252,6 @@ h3.categoria-catalogo:hover {
 
 @media only screen and (max-width: 745px) {
   .responsive-faqs {
-  
     margin-left: 2rem;
     margin-right: 2rem;
   }
@@ -1270,17 +1292,21 @@ h3.categoria-catalogo:hover {
   width: 100%;
 }
 
+.grid__cart {
+  margin-bottom: 6rem;
+}
+
 @media only screen and (max-width: 1672px) {
   .grid {
     -ms-grid-columns: (1fr);
-        grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media only screen and (max-width: 1405px) {
   .grid {
     -ms-grid-columns: (1fr);
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1293,7 +1319,7 @@ h3.categoria-catalogo:hover {
 @media only screen and (max-width: 480px) {
   .grid {
     -ms-grid-columns: (1fr);
-        grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -1303,8 +1329,8 @@ h3.categoria-catalogo:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .market {
@@ -1313,8 +1339,8 @@ h3.categoria-catalogo:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .card {
@@ -1323,16 +1349,16 @@ h3.categoria-catalogo:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 10px;
   background-color: white;
 }
@@ -1347,16 +1373,16 @@ h3.categoria-catalogo:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-top: 0.8rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1374,10 +1400,10 @@ h3.categoria-catalogo:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
 }
 
 .price-card {
@@ -1386,10 +1412,10 @@ h3.categoria-catalogo:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
 }
 
 .img-card {
@@ -1406,16 +1432,17 @@ h3.categoria-catalogo:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .margin {
@@ -1427,8 +1454,8 @@ h3.categoria-catalogo:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .button-inbox {
@@ -1445,8 +1472,8 @@ h3.categoria-catalogo:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow: hidden;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -1465,7 +1492,7 @@ h3.categoria-catalogo:hover {
 .button-inbox svg {
   display: block;
   -webkit-transform-origin: center center;
-          transform-origin: center center;
+  transform-origin: center center;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
@@ -1478,44 +1505,44 @@ h3.categoria-catalogo:hover {
 
 .button-inbox:hover .svg-wrapper {
   -webkit-animation: fly-1 0.6s ease-in-out infinite alternate;
-          animation: fly-1 0.6s ease-in-out infinite alternate;
+  animation: fly-1 0.6s ease-in-out infinite alternate;
 }
 
 .button-inbox:hover svg {
   -webkit-transform: translateX(2.4em) rotate(45deg) scale(1.1);
-          transform: translateX(2.4em) rotate(45deg) scale(1.1);
+  transform: translateX(2.4em) rotate(45deg) scale(1.1);
   color: #2ac9ad;
 }
 
 .button-inbox:hover span {
   -webkit-transform: translateX(10em);
-          transform: translateX(10em);
+  transform: translateX(10em);
 }
 
 .button-inbox:active {
   -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 @-webkit-keyframes fly-1 {
   from {
     -webkit-transform: translateY(0.1em);
-            transform: translateY(0.1em);
+    transform: translateY(0.1em);
   }
   to {
     -webkit-transform: translateY(-0.1em);
-            transform: translateY(-0.1em);
+    transform: translateY(-0.1em);
   }
 }
 
 @keyframes fly-1 {
   from {
     -webkit-transform: translateY(0.1em);
-            transform: translateY(0.1em);
+    transform: translateY(0.1em);
   }
   to {
     -webkit-transform: translateY(-0.1em);
-            transform: translateY(-0.1em);
+    transform: translateY(-0.1em);
   }
 }
 
@@ -1533,11 +1560,11 @@ h3.categoria-catalogo:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: bold;
   margin: 0.5rem;
   margin-top: 1.5rem;
@@ -1552,7 +1579,7 @@ h3.categoria-catalogo:hover {
 
 .button-inbox-market:active {
   -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+  transform: translateY(-1px);
   background-color: #fafafa;
 }
 
@@ -1567,7 +1594,6 @@ h3.categoria-catalogo:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
 }
 
 @media only screen and (max-width: 1365px) {
@@ -1575,7 +1601,6 @@ h3.categoria-catalogo:hover {
     display: none;
   }
 }
-
 
 #responsive-faqs {
   margin-bottom: 10rem;
@@ -1611,13 +1636,15 @@ h3.categoria-catalogo:hover {
 }
 
 .catalogo-faqs {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin-bottom: 1rem;
   margin-top: 2rem;
 }
 
 .text-faqs {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 80;
   font-size: larger;
   padding-top: 1rem;
@@ -1631,11 +1658,11 @@ h3.categoria-catalogo:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .size-gif {
@@ -1649,7 +1676,7 @@ h3.categoria-catalogo:hover {
 
 @media only screen and (max-width: 2000px) {
   .size-tab {
-    max-height: 500px ;
+    max-height: 500px;
   }
 }
 
@@ -1661,7 +1688,7 @@ h3.categoria-catalogo:hover {
   border-style: solid;
   color: #2ac9ad;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
- Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5rem;
   margin-left: 10rem;
   margin-right: 10rem;
@@ -1670,6 +1697,5 @@ h3.categoria-catalogo:hover {
 
 .btn-tab:hover {
   background-color: #2ac9ac38;
-
 }
 /*# sourceMappingURL=style.css.map */
