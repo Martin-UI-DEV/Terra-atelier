@@ -63,6 +63,7 @@ section {
   padding-bottom: 1rem;
   position: fixed;
   z-index: 1000;
+  box-shadow: 0 0 16px rgb(74 74 77 / 10%);
 }
 
 .navbar-brand {
@@ -71,7 +72,7 @@ section {
   justify-content: center;
 }
 
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 992px) {
   .navbar-brand {
     margin: unset;
     justify-content: flex-start;
@@ -91,7 +92,7 @@ section {
 }
 
 .logo {
-  width: 160px;
+  width: 130px;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -1085,9 +1086,14 @@ h3 {
   cursor: pointer;
 }
 
+p.categoria-catalogo {
+  margin-bottom: 0.5rem;
+}
+
 p.categoria-catalogo:hover {
   color: #2ac9ad;
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .linea-precio {
@@ -1293,6 +1299,18 @@ p.categoria-catalogo:hover {
   gap: 2rem;
   width: 100%;
 }
+
+@media only screen and (min-width: 992px){
+  .grid__background {
+    margin-top: -8rem;
+    position: relative;
+    z-index: 10;
+    background-color: #f7f7f8;
+    border-radius: 10px;
+    padding: 0.5rem 4rem;
+  }
+}
+
 
 .grid__cart {
   margin-bottom: 6rem;
