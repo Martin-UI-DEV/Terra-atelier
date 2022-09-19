@@ -152,7 +152,7 @@ dataBase.push(new Product(9, "Ficus", 4200));
 dataBase.push(new Product(10, "Corteza de pino", 300));
 dataBase.push(new Product(11, "Pometina", 300));
 dataBase.push(new Product(12, "Humus de lombriz", 210));
-dataBase.push(new Product(13, "Sustrato para cactus", 420));
+dataBase.push(new Product(13, "Sustrato para huerta", 420));
 dataBase.push(new Product(14, "Maceta de plástico", 260));
 dataBase.push(new Product(15, "Maceta de terracota", 150));
 
