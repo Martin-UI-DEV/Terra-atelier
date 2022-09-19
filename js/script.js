@@ -57,7 +57,7 @@
 // function finishShop() {
 //   /* MEDIO DE PAGO*/
 //   success = Number(
-//     prompt(`¿Cómo desea abonar? 
+//     prompt(`¿Cómo desea abonar?
 // 1 = Efectivo
 // 2 = Tarjeta de crédito`)
 //   );
@@ -126,46 +126,43 @@
 // /* FUNCION INVOCADA*/
 // addProducts();
 
-
-
 /* DOM */
 
 class Product {
-  constructor(id, name, price) {
-    this.id = id
-    this.name = name
-    this.price = price
+  constructor(id, img, name, price) {
+    this.id = id;
+    this.img = img;
+    this.name = name;
+    this.price = price;  
   }
 }
 
-let dataBase = []
-dataBase.push(new Product(0, "Pino", 890));
-dataBase.push(new Product(1, "Potus", 1100));
-dataBase.push(new Product(2, "Helecho", 500));
-dataBase.push(new Product(3, "Cactus", 3500));
-dataBase.push(new Product(4, "Suculenta", 2000));
-dataBase.push(new Product(5, "Jazmin", 2400));
-dataBase.push(new Product(6, "Orquidea", 6500));
-dataBase.push(new Product(7, "Lavanda", 190));
-dataBase.push(new Product(8, "Kalanchoe", 590));
-dataBase.push(new Product(9, "Ficus", 4200));
-dataBase.push(new Product(10, "Corteza de pino", 300));
-dataBase.push(new Product(11, "Pometina", 300));
-dataBase.push(new Product(12, "Humus de lombriz", 210));
-dataBase.push(new Product(13, "Sustrato para huerta", 420));
-dataBase.push(new Product(14, "Maceta de plástico", 260));
-dataBase.push(new Product(15, "Maceta de terracota", 150));
-
+let dataBase = [];
+dataBase.push(new Product(0, "img/pinoLimon.jpg", "Pino", 890));
+dataBase.push(new Product(1, "img/photus.jpg", "Potus", 1100));
+dataBase.push(new Product(2, "img/helecho.jpg", "Helecho", 500));
+dataBase.push(new Product(3, "img/cactus.jpg", "Cactus", 3500));
+dataBase.push(new Product(4, "img/suculenta.jpg", "Suculenta", 2000));
+dataBase.push(new Product(5, "img/jazmin.jpg", "Jazmin", 2400));
+dataBase.push(new Product(6, "img/orquidea.jpg", "Orquidea", 6500));
+dataBase.push(new Product(7, "img/lavanda.jpg", "Lavanda", 190));
+dataBase.push(new Product(8, "img/kalanchoe.jpg", "Kalanchoe", 590));
+dataBase.push(new Product(9, "img/ficus.jpg", "Ficus", 4200));
+dataBase.push(new Product(10, "img/corteza.jpg", "Corteza de pino", 300));
+dataBase.push(new Product(11, "img/pometina.jpg", "Pometina", 300));
+dataBase.push(new Product(12, "img/humus.jpg", "Humus de lombriz", 210));
+dataBase.push(new Product(13, "img/sustrato.jpg", "Sustrato para huerta", 420));
+dataBase.push(new Product(14, "img/macetaPlastico.jpg", "Maceta de plástico", 260));
+dataBase.push(new Product(15, "img/macetaTerracota.jpg", "Maceta de terracota", 150));
 
 let section = document.querySelector(".grid__cart");
 let temp = document.querySelector("template");
 let card = temp.content.querySelector("div");
 
-
-dataBase.forEach((Product)=>{
-  let cardClon = card.cloneNode(true) 
-  section.appendChild(cardClon)
-  cardClon.children[1].innerText = Product.name
-  cardClon.children[2].innerText = Product.price
-
-})
+dataBase.forEach((Product) => {
+  let cardClon = card.cloneNode(true);
+  section.appendChild(cardClon);
+  cardClon.children[0].src = Product.img;
+  cardClon.children[1].innerText = Product.name;
+  cardClon.children[2].innerText = Product.price;
+});
