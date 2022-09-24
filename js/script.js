@@ -128,41 +128,130 @@
 
 /* DOM */
 
-class Product {
-  constructor(id, img, name, price) {
-    this.id = id;
-    this.img = img;
-    this.name = name;
-    this.price = price;  
-  }
-}
+// class Product {
+//   constructor(id, img, name, price) {
+//     this.id = id;
+//     this.img = img;
+//     this.name = name;
+//     this.price = price;
+//   }
+// }
 
-let dataBase = [];
-dataBase.push(new Product(0, "img/pinoLimon.jpg", "Pino", 890));
-dataBase.push(new Product(1, "img/photus.jpg", "Potus", 1100));
-dataBase.push(new Product(2, "img/helecho.jpg", "Helecho", 500));
-dataBase.push(new Product(3, "img/cactus.jpg", "Cactus", 3500));
-dataBase.push(new Product(4, "img/suculenta.jpg", "Suculenta", 2000));
-dataBase.push(new Product(5, "img/jazmin.jpg", "Jazmin", 2400));
-dataBase.push(new Product(6, "img/orquidea.jpg", "Orquidea", 6500));
-dataBase.push(new Product(7, "img/lavanda.jpg", "Lavanda", 190));
-dataBase.push(new Product(8, "img/kalanchoe.jpg", "Kalanchoe", 590));
-dataBase.push(new Product(9, "img/ficus.jpg", "Ficus", 4200));
-dataBase.push(new Product(10, "img/corteza.jpg", "Corteza de pino", 300));
-dataBase.push(new Product(11, "img/pometina.jpg", "Pometina", 300));
-dataBase.push(new Product(12, "img/humus.jpg", "Humus de lombriz", 210));
-dataBase.push(new Product(13, "img/sustrato.jpg", "Sustrato para huerta", 420));
-dataBase.push(new Product(14, "img/macetaPlastico.jpg", "Maceta de plástico", 260));
-dataBase.push(new Product(15, "img/macetaTerracota.jpg", "Maceta de terracota", 150));
+// let dataBase = [];
+// dataBase.push(new Product(0, "img/pinoLimon.jpg", "Pino", 890));
+// dataBase.push(new Product(1, "img/photus.jpg", "Potus", 1100));
+// dataBase.push(new Product(2, "img/helecho.jpg", "Helecho", 500));
+// dataBase.push(new Product(3, "img/cactus.jpg", "Cactus", 3500));
+// dataBase.push(new Product(4, "img/suculenta.jpg", "Suculenta", 2000));
+// dataBase.push(new Product(5, "img/jazmin.jpg", "Jazmin", 2400));
+// dataBase.push(new Product(6, "img/orquidea.jpg", "Orquidea", 6500));
+// dataBase.push(new Product(7, "img/lavanda.jpg", "Lavanda", 190));
+// dataBase.push(new Product(8, "img/kalanchoe.jpg", "Kalanchoe", 590));
+// dataBase.push(new Product(9, "img/ficus.jpg", "Ficus", 4200));
+// dataBase.push(new Product(10, "img/corteza.jpg", "Corteza de pino", 300));
+// dataBase.push(new Product(11, "img/pometina.jpg", "Pometina", 300));
+// dataBase.push(new Product(12, "img/humus.jpg", "Humus de lombriz", 210));
+// dataBase.push(new Product(13, "img/sustrato.jpg", "Sustrato para huerta", 420));
+// dataBase.push(
+//   new Product(14, "img/macetaPlastico.jpg", "Maceta de plástico", 260)
+// );
+// dataBase.push(
+//   new Product(15, "img/macetaTerracota.jpg", "Maceta de terracota", 150)
+// );
 
-let section = document.querySelector(".grid__cart");
-let temp = document.querySelector("template");
-let card = temp.content.querySelector("div");
+// let section = document.querySelector(".grid__cart");
+// let temp = document.querySelector("template");
+// let card = temp.content.querySelector("div");
 
-dataBase.forEach((Product) => {
-  let cardClon = card.cloneNode(true);
-  section.appendChild(cardClon);
-  cardClon.children[0].src = Product.img;
-  cardClon.children[1].innerText = Product.name;
-  cardClon.children[2].innerText = Product.price;
-});
+// dataBase.forEach((Product) => {
+//   let cardClon = card.cloneNode(true);
+//   section.appendChild(cardClon);
+//   cardClon.children[0].src = Product.img;
+//   cardClon.children[1].innerText = Product.name;
+//   cardClon.children[2].innerText = Product.price;
+//   });
+
+
+// class Products {
+  // constructor(id, img, name, price) {
+    // this.id = id;
+    // this.img = img;
+    // this.name = name;
+    // this.price = price;
+  // }
+// }
+// 
+// const cartProducts = [];
+// const prod1 = new Products(0, "img/pinoLimon.jpg", "Pino", 890);
+// const prod2 = new Products(1, "img/photus.jpg", "Potus", 1100);
+// const prod3 = new Products(3, "img/cactus.jpg", "Cactus", 3500);
+// const prod4 = new Products(4, "img/suculenta.jpg", "Suculenta", 2000);
+// const prod5 = new Products(5, "img/jazmin.jpg", "Jazmin", 2400);
+// const prod6 = new Products(6, "img/orquidea.jpg", "Orquidea", 6500);
+// const prod7 = new Products(7, "img/lavanda.jpg", "Lavanda", 190);
+// const prod8 = new Products(8, "img/kalanchoe.jpg", "Kalanchoe", 590);
+// const prod9 = new Products(9, "img/ficus.jpg", "Ficus", 4200);
+// const prod10 = new Products(10, "img/corteza.jpg", "Corteza de pino", 300);
+// const prod11 = new Products(11, "img/pometina.jpg", "Pometina", 300);
+// const prod12 = new Products(12, "img/humus.jpg", "Humus de lombriz", 210);
+// const prod13 = new Products(
+  // 13,
+  // "img/sustrato.jpg",
+  // "Sustrato para huerta",
+  // 420
+// );
+// const prod14 = new Products(
+  // 14,
+  // "img/macetaPlastico.jpg",
+  // "Maceta de plástico",
+  // 260
+// );
+// const prod15 = new Products(
+  // 15,
+  // "img/macetaTerracota.jpg",
+  // "Maceta de terracota",
+  // 150
+// );
+// 
+// cartProducts.push(
+  // prod1,
+  // prod2,
+  // prod3,
+  // prod4,
+  // prod5,
+  // prod6,
+  // prod7,
+  // prod8,
+  // prod9,
+  // prod10,
+  // prod11,
+  // prod12,
+  // prod13,
+  // prod14,
+  // prod15
+// );
+// 
+// const showProducts = (products) => {
+  // const gridCart = document.querySelector(".grid__cart");
+  // products.forEach((product) => {
+    // const card = document.createElement("card");
+    // card.innerHTML = `<div class="card">
+                        // <img src="${product.img}" class="img-card card-img-top" alt="imageplant">
+                        // <h5 class="card-title mt-3">${product.name}</h5>
+                        // <h5 class="card-subtitle mt-3">${product.price}</h5>
+                        // <button class="button-inbox-market" id="button${product.id}">
+                          // <span> Agregar al carrito </span>
+                        // </button>
+                      // </div>`;
+    // gridCart.appendChild(card);
+    // const button = document.querySelector(`#button${product.id}`);
+    // button.addEventListener(`click`, () =>{
+      // cart(`${product.id}`);
+      // alert(`Agregaste ${product.name}`)
+    // })
+  // });
+// };
+// 
+// showProducts(cartProducts);
+
+
