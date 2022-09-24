@@ -1,257 +1,148 @@
-// /* ARRAY VACIO PARA EL CARRITO*/
 
-// let cart = [];
+const cards = document.getElementById('cards')
+const items = document.getElementById('items')
+const footer = document.getElementById('footer')
+const templateCard = document.getElementById('template-card').content
+const templateFooter = document.getElementById('template-footer').content
+const templateCarrito = document.getElementById('template-carrito').content
+const fragment = document.createDocumentFragment()
+let carrito = {}
 
-// /* DECLARACION DE FUNCION PARA CANTIDADES */
-// function productOption(price, productName) {
-//   /* PROMPT DE CANTIDADES*/
-//   const units = Number(prompt("¿Cuantos desea llevar?"));
-//   const total = price * units;
+document.addEventListener('DOMContentLoaded', () => {
+  fetchData()
+  if (localStorage.getItem('carrito')) {
+    carrito = JSON.parse(localStorage.getItem('carrito'))
+    pintarCarrito()
+  }
+});
 
-//   cart.push({ productName, units, price });
-// }
+cards.addEventListener('click', e => {
+  addCarrito(e)
+})
+items.addEventListener('click', e => {
+  btnAumentarDisminuir(e)
+})
 
-// /* DECLARACION DE FUNCION PARA EL CARRITO */
-// function myCart() {
-//   const decision = parseInt(
-//     prompt(`Estos son los productos que seleccionaste:\n\n${cartItems()}
+// Traer productos
+const fetchData = async () => {
+  try {
+    const res = await fetch('api.json');
+    const data = await res.json()
+    pintarCards(data)
+  }
+  catch (error) {
+    console.log(error)
+  }
+}
 
-//   1 para finalizar la compra
-//   2 para agregar mas productos
-//   3 para vaciar el carrito`)
-//   );
+// Pintar productos
+const pintarCards = data => {
+  data.forEach(producto => {
+    templateCard.querySelector('h5').textContent = producto.title
+    templateCard.querySelector('p').textContent = producto.price
+    templateCard.querySelector('img').setAttribute("src", producto.img)
+    templateCard.querySelector('.button-inbox-market').dataset.id = producto.id
+    const clone = templateCard.cloneNode(true)
+    fragment.appendChild(clone)
+  })
+  cards.appendChild(fragment)
+}
 
-//   switch (decision) {
-//     case 1:
-//       finishShop();
-//       break;
-//     case 2:
-//       addProducts();
-//       break;
-//     case 3:
-//       deleteProducts();
-//       break;
+// Agregar al carrito
+const addCarrito = e => {
+  if (e.target.classList.contains('button-inbox-market')) {
+    setCarrito(e.target.parentElement)
+  }
+  e.stopPropagation()
+}
 
-//     default:
-//       alert("ingrese una opción válida");
-//       myCart();
-//       break;
-//   }
-// }
+const setCarrito = objeto => {
+  const producto = {
+    title: objeto.querySelector('h5').textContent,
+    price: objeto.querySelector('p').textContent,
+    id: objeto.querySelector('.button-inbox-market').dataset.id,
+    cantidad: 1
+  }
+  if (carrito.hasOwnProperty(producto.id)) {
+    producto.cantidad = carrito[producto.id].cantidad + 1
+  }
 
-// /* DECLARACION DE FUNCION PARA SUMAR PRODUCTOS AL CARRITO */
-// function cartItems() {
-//   let allItems = "";
-//   for (let i = 0; i < cart.length; i++) {
-//     const product = cart[i];
-//     const productName = product.productName;
-//     const units = product.units;
-//     const subtotal = product.price * product.units;
-//     const textItems = `Cant. ${units} ${productName}: $${subtotal} \n`;
-//     allItems = allItems + textItems;
-//   }
-//   return allItems;
-// }
+  carrito[producto.id] = { ...producto }
+  pintarCarrito()
+}
 
-// /* DECLARACION DE FUNCION PARA FINALIZAR COMPRA */
-// function finishShop() {
-//   /* MEDIO DE PAGO*/
-//   success = Number(
-//     prompt(`¿Cómo desea abonar?
-// 1 = Efectivo
-// 2 = Tarjeta de crédito`)
-//   );
-//   if (success == 1) {
-//     alert(
-//       "¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar"
-//     );
-//     alert("¡Gracias por tu compra!");
-//   } else if (success == 2) {
-//     creditCard = Number(prompt(`Ingrese los datos de su tarjeta de crédito`));
-//     alert(
-//       "¡Listo! Tu orden se generó con exito, en 24hs hábiles tu producto ya estará listo para retirar"
-//     );
-//     alert("¡Gracias por tu compra!");
-//   } else {
-//     alert("Por favor ingresá una opción válida");
-//   }
-// }
+const pintarCarrito = () => {
+  items.innerHTML = ''
+  Object.values(carrito).forEach(producto => {
+    templateCarrito.querySelector('th').textContent = producto.id
+    templateCarrito.querySelectorAll('td')[0].textContent = producto.title
+    templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
+    templateCarrito.querySelector('span').textContent = producto.cantidad * producto.price
 
-// /* DECLARACION DE FUNCION PARA VACIAR CARRITO */
-// function deleteProducts() {
-//   cart = [];
-//   myCart();
-// }
+    //botones
+    templateCarrito.querySelector('.btn-info').dataset.id = producto.id
+    templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
 
-// /* DECLARACION DE FUNCION DEL MENU PRINCIPAL */
-// function addProducts() {
-//   /* LISTA DE PRODUCTOS */
-//   let products = Number(
-//     prompt(`Elegí el producto que quieras comprar ingresando el número que corresponda
+    const clone = templateCarrito.cloneNode(true)
+    fragment.appendChild(clone)
+  })
+  items.appendChild(fragment)
 
-//     --------------------------
+  pintarFooter()
 
-//     1 - Potus - $750
-//     2 - Suculentas - $600
-//     3 - Cactus - $500`)
-//   );
+  localStorage.setItem('carrito', JSON.stringify(carrito))
+}
 
-//   /* SWITCH DE OPCIONES */
+const pintarFooter = () => {
+  footer.innerHTML = ''
 
-//   switch (products) {
-//     /* SI ELEGIS POTUS */
-//     case 1:
-//       productOption(750, "potus");
-//       break;
+  if (Object.keys(carrito).length === 0) {
+    footer.innerHTML = `
+        <th scope="row" colspan="5">Carrito vacío</th>
+        `
+    return
+  }
 
-//     /* SI ELEGIS SUCULENTAS */
-//     case 2:
-//       productOption(600, "suculentas");
-//       break;
+  // sumar cantidad y sumar totales
+  const nCantidad = Object.values(carrito).reduce((acc, { cantidad }) => acc + cantidad, 0)
+  const nPrecio = Object.values(carrito).reduce((acc, { cantidad, price }) => acc + cantidad * price, 0)
+  // console.log(nPrecio)
 
-//     /* SI ELEGIS CACTUS */
-//     case 3:
-//       productOption(500, "cactus");
-//       break;
+  templateFooter.querySelectorAll('td')[0].textContent = nCantidad
+  templateFooter.querySelector('span').textContent = nPrecio
 
-//     /* SI LA OPCION INGRESADA NO ES VÁLIDA */
-//     default:
-//       alert("Ingrese una opción válida");
-//       addProducts();
-//       return;
-//   }
-//   myCart();
-// }
+  const clone = templateFooter.cloneNode(true)
+  fragment.appendChild(clone)
 
-// /* FUNCION INVOCADA*/
-// addProducts();
+  footer.appendChild(fragment)
 
-/* DOM */
+  const boton = document.querySelector('#vaciar-carrito')
+  boton.addEventListener('click', () => {
+    carrito = {}
+    pintarCarrito()
+  })
 
-// class Product {
-//   constructor(id, img, name, price) {
-//     this.id = id;
-//     this.img = img;
-//     this.name = name;
-//     this.price = price;
-//   }
-// }
+}
 
-// let dataBase = [];
-// dataBase.push(new Product(0, "img/pinoLimon.jpg", "Pino", 890));
-// dataBase.push(new Product(1, "img/photus.jpg", "Potus", 1100));
-// dataBase.push(new Product(2, "img/helecho.jpg", "Helecho", 500));
-// dataBase.push(new Product(3, "img/cactus.jpg", "Cactus", 3500));
-// dataBase.push(new Product(4, "img/suculenta.jpg", "Suculenta", 2000));
-// dataBase.push(new Product(5, "img/jazmin.jpg", "Jazmin", 2400));
-// dataBase.push(new Product(6, "img/orquidea.jpg", "Orquidea", 6500));
-// dataBase.push(new Product(7, "img/lavanda.jpg", "Lavanda", 190));
-// dataBase.push(new Product(8, "img/kalanchoe.jpg", "Kalanchoe", 590));
-// dataBase.push(new Product(9, "img/ficus.jpg", "Ficus", 4200));
-// dataBase.push(new Product(10, "img/corteza.jpg", "Corteza de pino", 300));
-// dataBase.push(new Product(11, "img/pometina.jpg", "Pometina", 300));
-// dataBase.push(new Product(12, "img/humus.jpg", "Humus de lombriz", 210));
-// dataBase.push(new Product(13, "img/sustrato.jpg", "Sustrato para huerta", 420));
-// dataBase.push(
-//   new Product(14, "img/macetaPlastico.jpg", "Maceta de plástico", 260)
-// );
-// dataBase.push(
-//   new Product(15, "img/macetaTerracota.jpg", "Maceta de terracota", 150)
-// );
+const btnAumentarDisminuir = e => {
+  if (e.target.classList.contains('btn-info')) {
+    const producto = carrito[e.target.dataset.id]
+    producto.cantidad++
+    carrito[e.target.dataset.id] = { ...producto }
+    pintarCarrito()
+  }
 
-// let section = document.querySelector(".grid__cart");
-// let temp = document.querySelector("template");
-// let card = temp.content.querySelector("div");
-
-// dataBase.forEach((Product) => {
-//   let cardClon = card.cloneNode(true);
-//   section.appendChild(cardClon);
-//   cardClon.children[0].src = Product.img;
-//   cardClon.children[1].innerText = Product.name;
-//   cardClon.children[2].innerText = Product.price;
-//   });
-
-
-// class Products {
-  // constructor(id, img, name, price) {
-    // this.id = id;
-    // this.img = img;
-    // this.name = name;
-    // this.price = price;
-  // }
-// }
-// 
-// const cartProducts = [];
-// const prod1 = new Products(0, "img/pinoLimon.jpg", "Pino", 890);
-// const prod2 = new Products(1, "img/photus.jpg", "Potus", 1100);
-// const prod3 = new Products(3, "img/cactus.jpg", "Cactus", 3500);
-// const prod4 = new Products(4, "img/suculenta.jpg", "Suculenta", 2000);
-// const prod5 = new Products(5, "img/jazmin.jpg", "Jazmin", 2400);
-// const prod6 = new Products(6, "img/orquidea.jpg", "Orquidea", 6500);
-// const prod7 = new Products(7, "img/lavanda.jpg", "Lavanda", 190);
-// const prod8 = new Products(8, "img/kalanchoe.jpg", "Kalanchoe", 590);
-// const prod9 = new Products(9, "img/ficus.jpg", "Ficus", 4200);
-// const prod10 = new Products(10, "img/corteza.jpg", "Corteza de pino", 300);
-// const prod11 = new Products(11, "img/pometina.jpg", "Pometina", 300);
-// const prod12 = new Products(12, "img/humus.jpg", "Humus de lombriz", 210);
-// const prod13 = new Products(
-  // 13,
-  // "img/sustrato.jpg",
-  // "Sustrato para huerta",
-  // 420
-// );
-// const prod14 = new Products(
-  // 14,
-  // "img/macetaPlastico.jpg",
-  // "Maceta de plástico",
-  // 260
-// );
-// const prod15 = new Products(
-  // 15,
-  // "img/macetaTerracota.jpg",
-  // "Maceta de terracota",
-  // 150
-// );
-// 
-// cartProducts.push(
-  // prod1,
-  // prod2,
-  // prod3,
-  // prod4,
-  // prod5,
-  // prod6,
-  // prod7,
-  // prod8,
-  // prod9,
-  // prod10,
-  // prod11,
-  // prod12,
-  // prod13,
-  // prod14,
-  // prod15
-// );
-// 
-// const showProducts = (products) => {
-  // const gridCart = document.querySelector(".grid__cart");
-  // products.forEach((product) => {
-    // const card = document.createElement("card");
-    // card.innerHTML = `<div class="card">
-                        // <img src="${product.img}" class="img-card card-img-top" alt="imageplant">
-                        // <h5 class="card-title mt-3">${product.name}</h5>
-                        // <h5 class="card-subtitle mt-3">${product.price}</h5>
-                        // <button class="button-inbox-market" id="button${product.id}">
-                          // <span> Agregar al carrito </span>
-                        // </button>
-                      // </div>`;
-    // gridCart.appendChild(card);
-    // const button = document.querySelector(`#button${product.id}`);
-    // button.addEventListener(`click`, () =>{
-      // cart(`${product.id}`);
-      // alert(`Agregaste ${product.name}`)
-    // })
-  // });
-// };
-// 
-// showProducts(cartProducts);
+  if (e.target.classList.contains('btn-danger')) {
+    const producto = carrito[e.target.dataset.id]
+    producto.cantidad--
+    if (producto.cantidad === 0) {
+      delete carrito[e.target.dataset.id]
+    } else {
+      carrito[e.target.dataset.id] = { ...producto }
+    }
+    pintarCarrito()
+  }
+  e.stopPropagation()
+}
 
 

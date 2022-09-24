@@ -1297,8 +1297,8 @@ p.categoria-catalogo:hover {
   display: grid;
   margin: 1rem;
   -ms-grid-columns: (1fr);
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   width: 100%;
 }
 
@@ -1617,7 +1617,7 @@ p.categoria-catalogo:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 1.5rem;
+  margin: 1.5rem auto 1rem auto;
   border-radius: 0.5rem;
 }
 
