@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 cards.addEventListener('click', e => {
   addCarrito(e)
+  
 })
 items.addEventListener('click', e => {
   btnAumentarDisminuir(e)
@@ -74,7 +75,7 @@ const setCarrito = objeto => {
 const pintarCarrito = () => {
   items.innerHTML = ''
   Object.values(carrito).forEach(producto => {
-    templateCarrito.querySelector('th').textContent = producto.id
+    /* templateCarrito.querySelector('th').textContent = producto.id */
     templateCarrito.querySelectorAll('td')[0].textContent = producto.title
     templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
     templateCarrito.querySelector('span').textContent = producto.cantidad * producto.price
@@ -144,5 +145,4 @@ const btnAumentarDisminuir = e => {
   }
   e.stopPropagation()
 }
-
 
