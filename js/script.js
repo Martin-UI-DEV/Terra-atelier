@@ -38,6 +38,7 @@ const fetchData = async () => {
 
 // Pintar productos
 const pintarCards = data => {
+  cards.innerHTML = "";
   data.forEach(producto => {
     templateCard.querySelector('h5').textContent = producto.title
     templateCard.querySelector('p').textContent = producto.price
@@ -146,3 +147,14 @@ const btnAumentarDisminuir = e => {
   e.stopPropagation()
 }
 
+/* FILTROS POR CATEGORÍA */
+
+async function filtrarPorCategoria( categoria ){
+  const res = await fetch('api.json');
+  const data = await res.json();
+
+  const filtradas = data.filter(object => object.category == categoria);
+  console.log(filtradas)
+
+  pintarCards(filtradas);
+}

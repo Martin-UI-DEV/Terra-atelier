@@ -1,92 +1,115 @@
 [
-    {
-      "id": 1,
-      "img": "img/pinoLimon.jpg",
-      "title": "Pino",
-      "price": 890
+  {
+    "id": 1,
+    "img": "img/pinoLimon.jpg",
+    "title": "Pino",
+    "category": "Exterior",
+    "price": 890
+
+  },
+  {
+      "id": 2,
+      "img": "img/photus.jpg",
+      "title": "Potus" ,
+      "category": "Interior",
+      "price": 1100 
     },
     {
-        "id": 2,
-        "img": "img/photus.jpg",
-        "title": "Potus" ,
-        "price": 1100 
-      },
-      {
-        "id": 3,
-        "img": "img/cactus.jpg",
-        "title": "Cactus",
-        "price": 3500
-      },
-      {
-        "id": 4,
-        "img": "img/suculenta.jpg",
-        "title": "Suculenta",
-        "price": "2000"
-      },
-      {
-        "id": 5,
-        "img": "img/jazmin.jpg",
-        "title": "Jazmin",
-        "price": 2400
-      },
-      {
-        "id": 6,
-        "img": "img/orquidea.jpg",
-        "title": "Orquidea",
-        "price": 6500
-      },
-      {
-        "id": 7,
-        "img": "img/lavanda.jpg",
-        "title": "Lavanda",
-        "price": 190
-      },
-      {
-        "id": 8,
-        "img": "img/kalanchoe.jpg",
-        "title": "Kalanchoe",
-        "price": 590
-      },
-      {
-        "id": 9,
-        "img": "img/ficus.jpg",
-        "title": "Ficus",
-        "price": 4200
-      },
-      {
-        "id": 10,
-        "img": "img/corteza.jpg",
-        "title": "Corteza de pino",
-        "price": 300
-      },
-      {
-        "id": 11,
-        "img": "img/pometina.jpg",
-        "title": "Pometina",
-        "price": 320
-      }, 
-      {
-        "id": 12,
-        "img": "img/humus.jpg",
-        "title": "Humus de lombriz",
-        "price": 210
-      }, 
-      {
-        "id": 13,
-        "img": "img/sustrato.jpg",
-        "title": "Sustrato para huerta",
-        "price": 420
-      }, 
-      {
-        "id": 14,
-        "img": "img/macetaPlastico.jpg",
-        "title": "Maceta de plástico",
-        "price": 260
-      }, 
-      {
-        "id": 15,
-        "img": "img/macetaTerracota.jpg",
-        "title": "Maceta de terracota",
-        "price": 150
-      } 
-  ]
+      "id": 3,
+      "img": "img/cactus.jpg",
+      "title": "Cactus",
+      "category": "Interior",
+      "price": 3500
+    },
+    {
+      "id": 4,
+      "img": "img/suculenta.jpg",
+      "title": "Suculenta",
+      "category": "Exterior",
+      "price": "2000"
+    },
+    {
+      "id": 5,
+      "img": "img/jazmin.jpg",
+      "title": "Jazmin",
+      "category": "Exterior",
+      "price": 2400
+    },
+    {
+      "id": 6,
+      "img": "img/orquidea.jpg",
+      "title": "Orquidea",
+      "category": "Exterior",
+      "price": 6500
+    },
+    {
+      "id": 7,
+      "img": "img/lavanda.jpg",
+      "title": "Lavanda",
+      "category": "Exterior",
+      "price": 190
+    },
+    {
+      "id": 8,
+      "img": "img/kalanchoe.jpg",
+      "title": "Kalanchoe",
+      "category": "Exterior",
+      "price": 590
+    },
+    {
+      "id": 9,
+      "img": "img/ficus.jpg",
+      "title": "Ficus",
+      "category": "Exterior",
+      "price": 4200
+    },
+    {
+      "id": 10,
+      "img": "img/corteza.jpg",
+      "title": "Corteza de pino",
+      "category": "Macetas",
+      "price": 300
+    },
+    {
+      "id": 11,
+      "img": "img/pometina.jpg",
+      "title": "Pometina",
+      "category": "Macetas",
+      "price": 320
+    }, 
+    {
+      "id": 12,
+      "img": "img/humus.jpg",
+      "title": "Humus de lombriz",
+      "category": "Sustrato",
+      "price": 210
+    }, 
+    {
+      "id": 13,
+      "img": "img/sustrato.jpg",
+      "title": "Sustrato para huerta",
+      "category": "Sustrato",
+      "price": 420
+    }, 
+    {
+      "id": 14,
+      "img": "img/macetaPlastico.jpg",
+      "title": "Maceta de plástico",
+      "category": "Macetas",
+      "price": 260
+    }, 
+    {
+      "id": 15,
+      "img": "img/macetaTerracota.jpg",
+      "title": "Maceta de terracota",
+      "category": "Macetas",
+      "price": 150
+    },
+    {
+      "id": 16,
+      "img": "",
+      "title": "Maceta de terracota",
+      "category": "Macetas",
+      "price": 150
+    } 
+]

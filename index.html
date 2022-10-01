@@ -94,45 +94,44 @@
       <aside>
         <h6 class="catalogo"> CATEGORÍAS
         </h6>
-        <p class="categoria-catalogo">Interior
+        <p class="categoria-catalogo" onclick="filtrarPorCategoria('Interior')">Interior
         </p>
-        <p class="categoria-catalogo">Exterior
+        <p class="categoria-catalogo" onclick="filtrarPorCategoria('Exterior')">Exterior
         </p>
-        <p class="categoria-catalogo">Suculentas
+        <p class="categoria-catalogo" onclick="filtrarPorCategoria('Suculentas')">Suculentas
         </p>
-        <p class="categoria-catalogo">Cactus
+        <p class="categoria-catalogo" onclick="filtrarPorCategoria('Cactus')">Cactus
         </p>
-        <p class="categoria-catalogo">Macetas
+        <p class="categoria-catalogo" onclick="filtrarPorCategoria('Macetas')">Macetas
         </p>
-        <p class="categoria-catalogo">Sustrato
+        <p class="categoria-catalogo" onclick="filtrarPorCategoria('Sustrato')">Sustrato
         </p>
-        <p class="categoria-catalogo">Decoración
+        <p class="categoria-catalogo" onclick="filtrarPorCategoria('Decoración')">Decoración
         </p>
       </aside>
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+    <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <h4>Carrito de compras</h4>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Item</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">Acción</th>
-          <th scope="col">Total</th>
-        </tr>
-      </thead>
-      <tbody id="items"></tbody> 
-      <tfoot>
-        <tr id="footer">
-          <th scope="row" colspan="5">Carrito de compras vacío.</th>
-        </tr>
-      </tfoot>
-    </table>
+    <div class="offcanvas__content">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="items"></tbody> 
+      </table>
+    </div>
+    <div class="offcanvas__footer" id="footer">
+    </div>   
   </div>
 </div>
 
@@ -154,8 +153,6 @@
       </div>
   </section>
 
-
-
     
   
 
@@ -165,7 +162,7 @@
     <td>10</td>
     <td>
         <button class="btn btn-danger btn-sm" id="vaciar-carrito">
-            vaciar todo
+            Vaciar carrito
         </button>
     </td>
     <td class="font-weight-bold">$ <span>5000</span></td>
