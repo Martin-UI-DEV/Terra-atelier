@@ -26,6 +26,7 @@
    <link rel="shortcut icon" href="img/favicon.ico">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/48079fb8ce.js" crossorigin="anonymous"></script>
     <title>Terra Atelier - Inicio</title>
 </head>
 
@@ -98,15 +99,13 @@
         </p>
         <p class="categoria-catalogo" onclick="filtrarPorCategoria('Exterior')">Exterior
         </p>
-        <p class="categoria-catalogo" onclick="filtrarPorCategoria('Suculentas')">Suculentas
-        </p>
-        <p class="categoria-catalogo" onclick="filtrarPorCategoria('Cactus')">Cactus
-        </p>
         <p class="categoria-catalogo" onclick="filtrarPorCategoria('Macetas')">Macetas
         </p>
         <p class="categoria-catalogo" onclick="filtrarPorCategoria('Sustrato')">Sustrato
         </p>
         <p class="categoria-catalogo" onclick="filtrarPorCategoria('Decoración')">Decoración
+        </p>
+        <p class="categoria-catalogo" onclick="noFiltrar()">Mostrar todo
         </p>
       </aside>
 
@@ -140,7 +139,7 @@
         <template id="template-card">
           <div class="col-12 mb-2">
             <div class="card">
-              <img src="" class="img-card card-img-top"
+              <img src="img/Sustrato/Turba.png" class="img-card card-img-top"
                     alt="imageplant">
               <div class="card-body">
                 <h5 class="card-title mt-3">Titulo</h5>
@@ -197,13 +196,13 @@
     <div class="redes container">
       <a class="icon-redes" href="https://api.whatsapp.com/send?phone=0123456789&text=Hola, Nececito mas informacion!"
         target="_blank">
-        <img src="img/wasap.svg" alt="iconwhatsapp">
+        <i class="fa-brands fa-whatsapp fa-xl"></i>
       </a>
       <a class="icon-redes" href="https://www.facebook.com/terraatelier.tiendadeplantas" target="_blank">
-        <img src="img/fb.svg" alt="iconfacebook">
+        <i class="fa-brands fa-facebook fa-xl"></i>
       </a>
       <a class="icon-redes" href="https://www.instagram.com/terraatelierplantas/" target="_blank">
-        <img src="img/ig.svg" alt="iconinstagram">
+        <i class="fa-brands fa-instagram fa-xl"></i>
       </a>
     </div>
   </footer>

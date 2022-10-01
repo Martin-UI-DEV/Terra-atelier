@@ -1089,7 +1089,6 @@ p.categoria-catalogo {
 
 p.categoria-catalogo:hover {
   color: #2ac9ad;
-  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
@@ -1770,4 +1769,8 @@ p.categoria-catalogo:hover {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.card-body p.card-subtitle::before {
+  content: '$';
 }

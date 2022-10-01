@@ -158,3 +158,13 @@ async function filtrarPorCategoria( categoria ){
 
   pintarCards(filtradas);
 }
+
+async function noFiltrar(){
+  const res = await fetch('api.json');
+  const data = await res.json();
+
+  const noFiltradas = data;
+  console.log(noFiltradas)
+
+  pintarCards(noFiltradas);
+}

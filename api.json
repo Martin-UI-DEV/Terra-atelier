@@ -1,115 +1,261 @@
 [
   {
-    "id": 1,
-    "img": "img/pinoLimon.jpg",
-    "title": "Pino",
-    "category": "Exterior",
-    "price": 890
-
+    "id": 16,
+    "img": "img/Interior/sansevieria.jpg",
+    "title": "Sansevieria",
+    "category": "Interior",
+    "price": 1200
   },
   {
-      "id": 2,
-      "img": "img/photus.jpg",
-      "title": "Potus" ,
-      "category": "Interior",
-      "price": 1100 
-    },
-    {
-      "id": 3,
-      "img": "img/cactus.jpg",
-      "title": "Cactus",
-      "category": "Interior",
-      "price": 3500
-    },
-    {
-      "id": 4,
-      "img": "img/suculenta.jpg",
-      "title": "Suculenta",
-      "category": "Exterior",
-      "price": "2000"
-    },
-    {
-      "id": 5,
-      "img": "img/jazmin.jpg",
-      "title": "Jazmin",
-      "category": "Exterior",
-      "price": 2400
-    },
-    {
-      "id": 6,
-      "img": "img/orquidea.jpg",
-      "title": "Orquidea",
-      "category": "Exterior",
-      "price": 6500
-    },
-    {
-      "id": 7,
-      "img": "img/lavanda.jpg",
-      "title": "Lavanda",
-      "category": "Exterior",
-      "price": 190
-    },
-    {
-      "id": 8,
-      "img": "img/kalanchoe.jpg",
-      "title": "Kalanchoe",
-      "category": "Exterior",
-      "price": 590
-    },
-    {
-      "id": 9,
-      "img": "img/ficus.jpg",
-      "title": "Ficus",
-      "category": "Exterior",
-      "price": 4200
-    },
-    {
-      "id": 10,
-      "img": "img/corteza.jpg",
-      "title": "Corteza de pino",
-      "category": "Macetas",
-      "price": 300
-    },
-    {
-      "id": 11,
-      "img": "img/pometina.jpg",
-      "title": "Pometina",
-      "category": "Macetas",
-      "price": 320
-    }, 
-    {
-      "id": 12,
-      "img": "img/humus.jpg",
-      "title": "Humus de lombriz",
-      "category": "Sustrato",
-      "price": 210
-    }, 
-    {
-      "id": 13,
-      "img": "img/sustrato.jpg",
-      "title": "Sustrato para huerta",
-      "category": "Sustrato",
-      "price": 420
-    }, 
-    {
-      "id": 14,
-      "img": "img/macetaPlastico.jpg",
-      "title": "Maceta de plástico",
-      "category": "Macetas",
-      "price": 260
-    }, 
-    {
-      "id": 15,
-      "img": "img/macetaTerracota.jpg",
-      "title": "Maceta de terracota",
-      "category": "Macetas",
-      "price": 150
-    },
-    {
-      "id": 16,
-      "img": "",
-      "title": "Maceta de terracota",
-      "category": "Macetas",
-      "price": 150
-    } 
+    "id": 17,
+    "img": "img/Interior/photus.png",
+    "title": "Photus",
+    "category": "Interior",
+    "price": 1100
+  },
+  {
+    "id": 18,
+    "img": "img/Interior/photusLemon.jpg",
+    "title": "Photus Lemon",
+    "category": "Interior",
+    "price": 1100
+  },
+  {
+    "id": 19,
+    "img": "img/Interior/Fittonia.png",
+    "title": "Fittonia",
+    "category": "Interior",
+    "price": 940
+  },
+  {
+    "id": 20,
+    "img": "img/Interior/FicusBenjamina.png",
+    "title": "Ficus Benjamina",
+    "category": "Interior",
+    "price": 3900
+  },
+  {
+    "id": 21,
+    "img": "img/Interior/Dracaema.png",
+    "title": "Dracaena",
+    "category": "Interior",
+    "price": 890
+  },
+  {
+    "id": 22,
+    "img": "img/Interior/Hiedra.png",
+    "title": "Hiedra Mini",
+    "category": "Interior",
+    "price": 480
+  },
+  {
+    "id": 23,
+    "img": "img/Interior/Aspidistra.jpg",
+    "title": "Aspidistra",
+    "category": "Interior",
+    "price": 1800
+  },
+  {
+    "id": 24,
+    "img": "img/Interior/Spathiphyllum.jpg",
+    "title": "Spathiphyllum",
+    "category": "Interior",
+    "price": 3200
+  },
+  {
+    "id": 25,
+    "img": "img/Interior/FicusPandurata.jpg",
+    "title": "Ficus Pandurata",
+    "category": "Interior",
+    "price": 6900
+  },
+  {
+    "id": 26,
+    "img": "img/Interior/chamaedorea.jpg",
+    "title": "Chamadorea",
+    "category": "Interior",
+    "price": 1200
+  },
+  {
+    "id": 27,
+    "img": "img/Interior/Monstera.jpg",
+    "title": "Monstera Deliciosa",
+    "category": "Interior",
+    "price": 4800
+  },
+  {
+    "id": 28,
+    "img": "img/Exterior/Malvon.png",
+    "title": "Malvón italiano",
+    "category": "Exterior",
+    "price": 980
+  },
+  {
+    "id": 29,
+    "img": "img/Exterior/Erica.jpeg",
+    "title": "Erica",
+    "category": "Exterior",
+    "price": 590
+  },
+  {
+    "id": 30,
+    "img": "img/Exterior/caniaBambu.png",
+    "title": "Caña de Bambú",
+    "category": "Exterior",
+    "price": 1200
+  },
+  {
+    "id": 31,
+    "img": "img/Exterior/Lazo.jpg",
+    "title": "Lazo de Amor",
+    "category": "Exterior",
+    "price": 190
+  },
+  {
+    "id": 32,
+    "img": "img/Exterior/Margarita.jpg",
+    "title": "Margarita",
+    "category": "Exterior",
+    "price": 190
+  },
+  {
+    "id": 33,
+    "img": "img/Exterior/Petunia.jpg",
+    "title": "Petunia",
+    "category": "Exterior",
+    "price": 170
+  },
+  {
+    "id": 34,
+    "img": "img/Macetas/Redondo.png",
+    "title": "Platos redondos",
+    "category": "Macetas",
+    "price": 120
+  },
+  {
+    "id": 35,
+    "img": "img/Macetas/Cuadrado.png",
+    "title": "Platos cuadrados",
+    "category": "Macetas",
+    "price": 350
+  },
+  {
+    "id": 36,
+    "img": "img/Macetas/Cilindro.png",
+    "title": "Cilindro Terracota",
+    "category": "Macetas",
+    "price": 330
+  },
+  {
+    "id": 37,
+    "img": "img/Macetas/Cubo.png",
+    "title": "Cubo Fibrocemento",
+    "category": "Macetas",
+    "price": 1150
+  },
+  {
+    "id": 38,
+    "img": "img/Macetas/Piramidal.jpg",
+    "title": "Maceta Piramidal",
+    "category": "Macetas",
+    "price": 120
+  },
+  {
+    "id": 39,
+    "img": "img/Decoracion/mimbre.jpeg",
+    "title": "Varas de Mimbre",
+    "category": "Decoración",
+    "price": 490
+  },
+  {
+    "id": 40,
+    "img": "img/Decoracion/bambu.png",
+    "title": "Bambú Artificial",
+    "category": "Decoración",
+    "price": 18900
+  },
+  {
+    "id": 41,
+    "img": "img/Decoracion/begonia.jpeg",
+    "title": "Begonia Artificial",
+    "category": "Decoración",
+    "price": 720
+  },
+  {
+    "id": 42,
+    "img": "img/Decoracion/areca.jpeg",
+    "title": "Areca Artificial",
+    "category": "Decoración",
+    "price": 62300
+  },
+  {
+    "id": 43,
+    "img": "img/Decoracion/tupid.png",
+    "title": "Ficus Otoñal",
+    "category": "Decoración",
+    "price": 9600
+  },
+  {
+    "id": 44,
+    "img": "img/Decoracion/limon.jpeg",
+    "title": "Limonero Artificial",
+    "category": "Decoración",
+    "price": 10300
+  },
+  {
+    "id": 45,
+    "img": "img/Decoracion/magnolia.png",
+    "title": "Magnolia Artificial",
+    "category": "Decoración",
+    "price": 2450
+  },
+  {
+    "id": 46,
+    "img": "img/Sustrato/Perlita.png",
+    "title": "Perlita",
+    "category": "Sustrato",
+    "price": 530
+  },
+  {
+    "id": 47,
+    "img": "img/Sustrato/Grow.png",
+    "title": "Grow Mix",
+    "category": "Sustrato",
+    "price": 950
+  },
+  {
+    "id": 48,
+    "img": "img/Sustrato/Turba.png",
+    "title": "Turba",
+    "category": "Sustrato",
+    "price": 360
+  },
+  {
+    "id": 49,
+    "img": "img/Sustrato/Musgo.png",
+    "title": "Musgo",
+    "category": "Sustrato",
+    "price": 400
+  },
+  {
+    "id": 50,
+    "img": "img/Sustrato/Arena.png",
+    "title": "Arena Gruesa",
+    "category": "Sustrato",
+    "price": 530
+  },
+  {
+    "id": 51,
+    "img": "img/Sustrato/Compost.png",
+    "title": "Compost Orgánico",
+    "category": "Sustrato",
+    "price": 320
+  },
+  {
+    "id": 52,
+    "img": "img/Sustrato/Pometina.png",
+    "title": "Pometina",
+    "category": "Sustrato",
+    "price": 750
+  }
 ]
