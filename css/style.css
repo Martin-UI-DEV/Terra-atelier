@@ -1011,7 +1011,7 @@ aside {
 @media only screen and (max-width: 1200px) {
   aside {
     width: 20%;
-    margin-left: 4rem;
+    margin-left: 0;
   }
 }
 
@@ -1306,7 +1306,18 @@ p.categoria-catalogo:hover {
     z-index: 10;
     background-color: #f7f7f8;
     border-radius: 20px;
-    padding: 0.5rem 8rem;
+    padding: 0.5rem 4rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .grid__background {
+    margin-top: -10rem;
+    position: relative;
+    z-index: 10;
+    background-color: #f7f7f8;
+    border-radius: 20px;
+    padding: 0.5rem 6rem;
   }
 }
 
@@ -1384,6 +1395,7 @@ p.categoria-catalogo:hover {
 
 .card:hover {
   box-shadow: 0 0 16px rgb(74 74 77 / 10%);
+  cursor: pointer;
 }
 
 .img-card:hover {
@@ -1433,6 +1445,7 @@ p.categoria-catalogo:hover {
 
 .btn-secondary {
   background-color: #131515;
+  padding: 0.75rem 1rem;
 }
 
 .btn.btn-secondary:hover {
@@ -1613,7 +1626,7 @@ p.categoria-catalogo:hover {
   font-size: 1rem;
   background-color: #2ac9ad;
   color: #ffffff;
-  padding: 0.5em;
+  padding: 0.75rem 1rem;
   border: solid;
   border-width: thin;
   border-color: #ffffff;
@@ -1773,4 +1786,85 @@ p.categoria-catalogo:hover {
 
 .card-body p.card-subtitle::before {
   content: '$';
+}
+
+.btn-danger.btn-sm,
+.btn-danger.btn-sm:focus  {
+  border: 1px solid #131515;
+  background-color: #fff;
+  color: #131515;
+}
+
+.btn-danger.btn-sm:hover {
+  background-color: rgb(236, 236, 236);
+  border: 1px solid #131515;
+  color: #131515;
+}
+
+
+.btn-danger.btn-sm:focus {
+  transform: scale(0.99);
+}
+
+
+.btn-info.btn-sm,
+.btn-info.btn-sm:hover,
+.btn-info.btn-sm:focus {
+  border: 1px solid #131515;
+  background-color: #131515;
+  color: #fff;
+}
+
+.btn-info.btn-sm:hover {
+  border: 1px solid #2e3333;
+  background-color: #2e3333;
+  color: #fff;
+}
+
+.btn-info.btn-sm:focus {
+  transform: scale(0.99);
+}
+
+.row__cart {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+button#vaciar-carrito {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+}
+
+td .btn-secondary {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+}
+
+.offcanvas__footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding-top: 1rem;
+}
+
+.table>:not(caption)>*>* {
+  border-bottom-width: 0px;
+}
+
+.cart__result-unit {
+  display: flex;
+  flex-direction: row;
+}
+
+.row__cart .btn-secondary:hover {
+  border: 1px solid #2e3333;
+  background-color: #2e3333;
+  color: #fff;
+}
+
+.row__cart .btn-secondary:focus {
+  transform:scale(0.99) 
 }
