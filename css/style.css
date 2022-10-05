@@ -1325,10 +1325,10 @@ p.categoria-catalogo:hover {
   margin-bottom: 6rem;
 }
 
-@media only screen and (max-width: 1672px) {
+@media only screen and (min-width: 1672px) {
   .grid {
     -ms-grid-columns: (1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
